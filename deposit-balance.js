@@ -41,7 +41,7 @@
   
     const floatBalance = parseFloat(textBalance.innerText);
 
-    const totalBalance = floatBalance * totalAmount;
+    const totalBalance = floatBalance * inputAmount;
 
     textBalance.innerText = totalBalance;
 
