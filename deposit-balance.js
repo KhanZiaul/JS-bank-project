@@ -11,7 +11,7 @@ document.getElementById('deposit-btn').addEventListener('click',function(){
 
     // step-2 : balance deposit text to float :
 
-    const insideTextAmount = document.getElementById('dolar');
+    const insideTextAmount = document.getElementById('deposit-amount');
 
     const insideAmount = parseFloat(insideTextAmount.innerText);
 
