@@ -2,38 +2,47 @@
 
 // deposit ------------------------>
 
-document.getElementById('deposit-btn').addEventListener('click',function(){
+    document.getElementById('deposit-btn').addEventListener('click',function(){
 
-// step-1 : Input deposit amount text to float:
+// step-1 : Input deposit amount text into float:
 
     const inputTextAmount = document.getElementById('deposit-input');
 
     const inputAmount = parseFloat(inputTextAmount.value);
 
-// step-2 : Amount deposit text to float :
+// step-2 : Make input filed empty
+
+    inputTextAmount.value = "";
+
+// step-3 : Check input validation
+
+    if(isNaN(inputAmount)){
+
+        alert('Without PAISA No Double!!!');
+
+        return;
+    }
+
+// step-4 : Amount of deposit text into float :
 
     const insideTextAmount = document.getElementById('deposit-amount');
 
     const insideAmount = parseFloat(insideTextAmount.innerText);
 
-// step-3 : Total amount
+// step-5 : Total amount
 
     const totalAmount = inputAmount + insideAmount;
 
     insideTextAmount.innerText = totalAmount;
 
-// step-4 : Connect deposit with balance 
+// step-6 : Adding deposit amount with total balance 
 
-   const textBalance =document.getElementById('balance');
+    const textBalance =document.getElementById('balance');
+  
+    const floatBalance = parseFloat(textBalance.innerText);
 
-   const floatBalance = parseFloat(textBalance.innerText);
+    const totalBalance = floatBalance * totalAmount;
 
-   const totalBalance = floatBalance * totalAmount;
-
-   textBalance.innerText = totalBalance;
-
-// step-5 : Make input filed empty
-
-   inputTextAmount.value = "";
+    textBalance.innerText = totalBalance;
 
 });
