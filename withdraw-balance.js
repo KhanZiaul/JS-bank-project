@@ -28,7 +28,7 @@ document.getElementById('withdraw-btn').addEventListener('click',function(){
 
    const floatBalance = parseFloat(textBalance.innerText);
 
-   const totalBalance = floatBalance - totalAmount;
+   const totalBalance = floatBalance - inputAmount;
 
    textBalance.innerText = totalBalance;
 
