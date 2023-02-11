@@ -37,7 +37,7 @@
 
 // step-6 : Validation Of amount in Bank
 
-    if(inputAmount > insideAmount){
+    if(inputAmount > floatBalance){
 
     alert('Are You Joking Man!!!');
 
