@@ -9,7 +9,7 @@ document.getElementById('sub-btn').addEventListener('click',function(){
 
 
     if(email.value === 'khanzia@gmail.com' && password.value === 'khanzia123'){
-        location.href = '/bank.html';
+        location.href = 'bank.html';
     }
 
     else{
